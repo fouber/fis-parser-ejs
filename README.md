@@ -47,7 +47,7 @@ a parser plugin for fis to compile ejs file
         console.log(html);
         ```
     
-    * compiled:
+    * release:
     
         ```javascript
         var tpl = [function(locals,filters,escape,rethrow){function rethrow(e,n,a,t){var r=n.split("\n"),s=Math.max(t-3,0),c=Math.min(r.length,t+3),i=r.slice(s,c).map(function(e,n){var a=n+s+1;return(a==t?" >> ":"    ")+a+"| "+e}).join("\n");throw e.path=a,e.message=(a||"ejs")+":"+t+"\n"+i+"\n\n"+e.message,e}escape=escape||function(e){return String(e).replace(/&(?!#?[a-zA-Z0-9]+;)/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/'/g,"&#39;").replace(/"/g,"&quot;")};var __stack={lineno:1,input:"<% if (user) { %>\n    <h2><%= user.name %></h2>\n<% } %>",filename:"a.ejs"};try{var buf=[];with(locals||{})!function(){buf.push(""),__stack.lineno=1,user&&(buf.push("\n    <h2>",escape((__stack.lineno=2,user.name)),"</h2>\n"),__stack.lineno=3),buf.push("")}();return buf.join("")}catch(err){rethrow(err,__stack.input,__stack.filename,__stack.lineno)}}][0];
